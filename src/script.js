@@ -12,7 +12,7 @@ const cardsGeneration = (numbCards) => {
                cardsArray.push(
                     '<div class="card" onclick="flipCard(this)">' +
                          '<div class="front-face face dsp-flex"><img src="' +
-                         '../public/front.png" alt="parrot" /></div>' +
+                         './public/front.png" alt="parrot" /></div>' +
                          '<div class="back-face face dsp-flex"><img src="' +
                          cardsImages[i] +
                          '" alt="parrot" /></div></div>'
