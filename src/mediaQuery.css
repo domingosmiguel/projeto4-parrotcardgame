@@ -2,10 +2,12 @@
      h1 {
           font-size: 36px;
           line-height: 42px;
-          text-align: center;
-          letter-spacing: -0.004em;
      }
      header {
           padding: 25px 25px;
+     }
+     main {
+          flex-direction: column;
+          align-items: center;
      }
 }

@@ -14,19 +14,19 @@
      display: none;
 }
 :root {
-     --title-font: "Righteous", cursive;
-     --other-font: "Roboto", sans-serif;
+     --font: "Roboto", sans-serif;
      --background-green: rgb(238, 249, 191);
      --title-green: rgb(117, 183, 158);
      --border-green: rgb(153, 206, 168);
      --card-green: rgb(167, 233, 175);
-     --black: rgb(51, 51, 51);
-     --max-width: 500px;
-     --item-width: 172px;
-     --item-height: 216px;
-     --transition: all 0.3s linear;
-     --border-radius: 10px;
-     --spacing: 19px;
+     --black: rgba(51, 51, 51, 0.3);
+     /* --black: rgba(0, 0, 0, 0.3); */
+     --card-width: 117px;
+     --card-height: 146px;
+     /* --transition: all 0.3s linear; */
+     --transition: all 0.5s;
+     --border-radius: 5px;
+     --spacing: 17px;
 }
 
 /*  
@@ -37,8 +37,6 @@
 * {
      box-sizing: border-box;
      cursor: default;
-     font-family: "Roboto", sans-serif;
-     font-weight: 700;
      text-transform: uppercase;
 }
 h1 {
@@ -48,7 +46,11 @@ h1 {
      text-align: center;
      letter-spacing: -0.004em;
 }
-
+.dsp-flex {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+}
 /*  
    =========
      GAME  
@@ -56,12 +58,55 @@ h1 {
 */
 body {
      background-color: var(--background-green);
+     font-family: var(--font);
+     font-weight: 700;
 }
 header {
      padding: 40px 40px;
 }
+main {
+     max-width: 1160px;
+     margin: 0 auto;
+     padding: 0 40px;
+}
 /*  
-   ===========
-     Closure
-   ===========
+   ==========
+     Cards
+   ==========
 */
+.card {
+     width: var(--card-width);
+     height: var(--card-height);
+     position: relative;
+     margin: var(--spacing);
+}
+
+.face {
+     width: 100%;
+     height: 100%;
+     border: solid 1px var(--border-green);
+     border-radius: var(--border-radius);
+     box-shadow: 1px 1px 1px var(--black);
+     border-radius: var(--border-radius);
+     background-color: var(--card-green);
+     align-items: center;
+     position: absolute;
+     backface-visibility: hidden;
+     transition: var(--transition);
+     transform-style: preserve-3d;
+}
+.face img {
+     width: 100px;
+     height: 100px;
+}
+.back-face {
+     transform: rotateY(180deg);
+}
+
+.card:hover .back-face {
+     transform: rotateY(0deg);
+}
+
+.card:hover .front-face {
+     transform: rotateY(-180deg);
+}
