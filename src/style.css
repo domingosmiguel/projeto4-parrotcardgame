@@ -36,7 +36,6 @@
 */
 * {
      box-sizing: border-box;
-     cursor: default;
      text-transform: uppercase;
 }
 h1 {
@@ -45,6 +44,7 @@ h1 {
      line-height: 66px;
      text-align: center;
      letter-spacing: -0.004em;
+     cursor: default;
 }
 .dsp-flex {
      display: flex;
@@ -64,6 +64,12 @@ body {
 header {
      padding: 40px 40px;
 }
+header.wide {
+     display: initial;
+}
+header.mobile {
+     display: none;
+}
 main {
      max-width: 1160px;
      margin: 0 auto;
@@ -80,7 +86,9 @@ main {
      position: relative;
      margin: var(--spacing);
 }
-
+.card:hover {
+     cursor: pointer;
+}
 .face {
      width: 100%;
      height: 100%;
@@ -102,11 +110,15 @@ main {
 .back-face {
      transform: rotateY(180deg);
 }
-
-.card:hover .back-face {
+.card.turned .back-face {
      transform: rotateY(0deg);
 }
-
-.card:hover .front-face {
+.card.turned .front-face {
+     transform: rotateY(-180deg);
+}
+.card.stuck .back-face {
+     transform: rotateY(0deg);
+}
+.card.stuck .front-face {
      transform: rotateY(-180deg);
 }

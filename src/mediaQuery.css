@@ -6,6 +6,12 @@
      header {
           padding: 25px 25px;
      }
+     header.wide {
+          display: none;
+     }
+     header.mobile {
+          display: initial;
+     }
      main {
           flex-direction: column;
           align-items: center;
