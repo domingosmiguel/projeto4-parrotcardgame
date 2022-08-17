@@ -10,7 +10,7 @@ const cardsGeneration = (numbCards) => {
      for (let j = 0; j < 2; j++) {
           for (let i = 0; i * 2 < numbCards; i++) {
                cardsArray.push(
-                    '<div class="card" onclick="turnCard(this)">' +
+                    '<div class="card" onclick="flipCard(this)">' +
                          '<div class="front-face face dsp-flex"><img src="' +
                          '../public/front.png" alt="parrot" /></div>' +
                          '<div class="back-face face dsp-flex"><img src="' +
@@ -29,25 +29,45 @@ const question = () => {
      } while (numberOfCards > 14 || numberOfCards < 4 || numberOfCards % 2 !== 0);
      cardsGeneration(numberOfCards);
 };
-const turnCard = (target) => {
-     const turnedCard = document.querySelector(".turned");
-     target.classList.add("turned");
-     console.log("cliclou");
-     if (turnedCard) {
-          const turnedCardImgSrc = turnedCard.querySelector(".back-face").querySelector("img").src;
-          const targetImgSrc = target.querySelector(".back-face").querySelector("img").src;
-          if (turnedCardImgSrc !== targetImgSrc) {
-               setTimeout(function () {
-                    target.classList.remove("turned");
-                    turnedCard.classList.remove("turned");
-               }, 1000);
-          } else {
-               target.classList.add("stuck");
-               turnedCard.classList.add("stuck");
-               target.classList.remove("turned");
-               turnedCard.classList.remove("turned");
-               target.onclick = "";
-               turnedCard.onclick = "";
+let counter = 0;
+const flipCard = (target) => {
+     target.setAttribute("onclick", "");
+     const flippedCard = document.querySelector(".flipped:not(.stuck)");
+     target.classList.add("flipped");
+     const bug = document.querySelector(".flipped.stuck");
+     if (bug) {
+          bug.classList.remove("flipped");
+     } else {
+          counter++;
+          // console.log(counter);
+          if (flippedCard) {
+               const flippedCardImgSrc = flippedCard
+                    .querySelector(".back-face")
+                    .querySelector("img").src;
+               const targetImgSrc = target.querySelector(".back-face").querySelector("img").src;
+               if (flippedCardImgSrc === targetImgSrc) {
+                    target.classList.add("stuck");
+                    flippedCard.classList.add("stuck");
+                    target.classList.remove("flipped");
+                    flippedCard.classList.remove("flipped");
+                    // console.log(document.querySelectorAll(".card"));
+                    // console.log(document.querySelectorAll(".stuck"));
+                    if (
+                         document.querySelectorAll(".card").length ===
+                         document.querySelectorAll(".stuck").length
+                    ) {
+                         // document.querySelector("main").innerHTML =
+                         //      "<h1>Você ganhou em " + counter + " jogadas!</h1>";
+                         alert("Você ganhou em " + counter + " jogadas!");
+                    }
+               } else {
+                    setTimeout(function () {
+                         target.classList.remove("flipped");
+                         flippedCard.classList.remove("flipped");
+                         target.setAttribute("onclick", "flipCard(this)");
+                         flippedCard.setAttribute("onclick", "flipCard(this)");
+                    }, 1000);
+               }
           }
      }
 };

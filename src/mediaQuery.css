@@ -4,13 +4,13 @@
           line-height: 42px;
      }
      header {
-          padding: 25px 25px;
+          margin: 40px 25px 15px;
      }
      header.wide {
           display: none;
      }
      header.mobile {
-          display: initial;
+          display: block;
      }
      main {
           flex-direction: column;

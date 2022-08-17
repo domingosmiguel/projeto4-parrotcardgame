@@ -62,10 +62,10 @@ body {
      font-weight: 700;
 }
 header {
-     padding: 40px 40px;
+     margin: 40px 0 30px;
 }
 header.wide {
-     display: initial;
+     display: block;
 }
 header.mobile {
      display: none;
@@ -110,10 +110,10 @@ main {
 .back-face {
      transform: rotateY(180deg);
 }
-.card.turned .back-face {
+.card.flipped .back-face {
      transform: rotateY(0deg);
 }
-.card.turned .front-face {
+.card.flipped .front-face {
      transform: rotateY(-180deg);
 }
 .card.stuck .back-face {
