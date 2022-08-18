@@ -1,8 +1,18 @@
-const startGame = (cards) => {
-     const cardsTable = document.querySelector("main");
-     for (let i = 0; i < cards.length; i++) cardsTable.innerHTML += cards[i];
+const stopwatch = () => {
+     presentTime = new Date().getTime();
+     totalTime = ((presentTime - startTime) / 1000).toFixed();
+     cardsTable.querySelector("div.stopwatch").innerHTML = totalTime;
 };
-const comparador = () => {
+
+// Put the cards on the table and starts the stopwatch
+const startGame = (cards) => {
+     for (let i = 0; i < cards.length; i++) cardsTable.innerHTML += cards[i];
+     // Calls 'stopwatch' every 1 second
+     startTime = new Date().getTime();
+     id = setInterval(stopwatch, 1000);
+};
+// Shuffle the cards
+const shuffler = () => {
      return Math.random() - 0.5;
 };
 const cardsGeneration = (numbCards) => {
@@ -19,12 +29,12 @@ const cardsGeneration = (numbCards) => {
                );
           }
      }
-     cardsArray.sort(comparador);
+     cardsArray.sort(shuffler);
      startGame(cardsArray);
 };
 const question = () => {
      let numberOfCards;
-     document.querySelector("main").innerHTML = "";
+     cardsTable.innerHTML = '<div class="stopwatch dsp-flex"></div>';
      do {
           numberOfCards = prompt("Com quantas cartas deseja jogar?");
      } while (numberOfCards > 14 || numberOfCards < 4 || numberOfCards % 2 !== 0);
@@ -54,9 +64,11 @@ const flipCard = (targetCard, flippedCard) => {
                document.querySelectorAll(".card").length ===
                document.querySelectorAll(".stuck").length
           ) {
-               // document.querySelector("main").innerHTML =
+               // Stops calling 'stopwatch'
+               clearInterval(id);
+               // cardsTable.innerHTML =
                //      "<h1>Você ganhou em " + counter + " jogadas!</h1>";
-               alert("Você ganhou em " + counter + " jogadas!");
+               alert("Você ganhou em " + counter + " jogadas e " + totalTime + " segundos");
                const answer = prompt("Gostaria de jogar novamente? (sim / não)");
                if (answer.toLowerCase() === "sim") question();
           }

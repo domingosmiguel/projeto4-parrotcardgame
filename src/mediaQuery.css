@@ -12,8 +12,12 @@
      header.mobile {
           display: block;
      }
-     main {
+     table {
           flex-direction: column;
           align-items: center;
+     }
+     div.stopwatch {
+          top: -20px;
+          right: 35px;
      }
 }
