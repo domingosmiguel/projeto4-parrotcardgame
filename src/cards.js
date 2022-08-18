@@ -7,5 +7,5 @@ const cardsImages = [
      "./public/tripletsparrot.gif",
      "./public/unicornparrot.gif",
 ];
-
+let counter;
 question();
