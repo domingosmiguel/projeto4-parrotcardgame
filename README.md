@@ -1,4 +1,4 @@
-# **Projeto 3: DrivenEats**
+# **Projeto 4: ParrotCardGame**
 
 Esse projeto foi feito como parte da minha formação como Desenvolvedor Web Full stack na Driven. A meta era desenvolver um jogo da memória simples para fixar melhor as novas ferramentas vistas durante a semana.
 
