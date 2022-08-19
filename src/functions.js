@@ -1,7 +1,7 @@
 const stopwatch = (startTime) => {
      const presentTime = new Date().getTime();
      totalTime = ((presentTime - startTime) / 1000).toFixed();
-     cardsTable.querySelector("div.stopwatch").innerHTML = totalTime;
+     cardsTable.querySelector("div.stopwatch").innerHTML = `${totalTime}s`;
 };
 // Puts the cards on the table and starts the stopwatch
 const startGame = (cards) => {
