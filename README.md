@@ -6,7 +6,7 @@ Esse projeto foi feito como parte da minha formação como Desenvolvedor Web Ful
 
 -    Responsividade
 -    Manipulação da DOM por meio de javascript puro (querySelector)
--    Função assíncrona (setTimeout, setInterval)
+-    Métodos javascript (setTimeout, setInterval)
 -    Manipulação de propriedades CSS (classList.add...)
 -    EventHandlers (onclick)
 -    Javascript básico (funções, do-while, for, Math... ) e melhores práticas
