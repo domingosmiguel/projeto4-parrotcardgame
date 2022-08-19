@@ -19,11 +19,9 @@
      --title-green: rgb(117, 183, 158);
      --border-green: rgb(153, 206, 168);
      --card-green: rgb(167, 233, 175);
-     /* --black: rgba(51, 51, 51, 0.3); */
      --black: rgba(0, 0, 0, 0.3);
      --card-width: 117px;
      --card-height: 146px;
-     /* --transition: all 0.3s linear; */
      --transition: all 0.5s;
      --border-radius: 5px;
      --spacing: 17px;
@@ -31,7 +29,7 @@
 
 /*  
    =================
-     Global Styles       CREATE SOME READY CLASSES WITH STYLES YOU WILL USE MORE THAN ONCE
+     Global Styles
    =================
 */
 * {
@@ -64,7 +62,7 @@ body {
 header {
      margin: 40px 0 30px;
 }
-header.wide {
+header.desktop {
      display: block;
 }
 header.mobile {
@@ -83,7 +81,8 @@ div.stopwatch {
      right: 70px;
      background-color: var(--title-green);
      width: 60px;
-     border-radius: 15px;
+     height: 31px;
+     border-radius: 15.5px;
      font-size: 18px;
      line-height: 30px;
      color: var(--background-green);

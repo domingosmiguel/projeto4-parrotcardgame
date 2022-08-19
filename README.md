@@ -15,8 +15,8 @@ Esse projeto foi feito como parte da minha formação como Desenvolvedor Web Ful
 
 Aplicando a técnica pomodoro de gerenciamento do tempo consegui terminar o projeto em algumas horas sem desrespeitar meus limites. Isto me abriu a possibilidade de revisar todo o código em busca de pontos de melhoria.
 
-![Imagem do resultado versão desktop](https://i.imgur.com/i8iTH3n.png)
-![Imagem do resultado versão mobile](https://i.imgur.com/YLr6jUe.png)
+![Imagem do resultado versão desktop](https://i.imgur.com/qKy05Tf.png)
+![Imagem do resultado versão mobile](https://i.imgur.com/PWYMEZv.png)
 
 Para mostrar o resultado, a aplicação foi colocada no ar no [Github Pages](https://migueldsp.github.io/projeto4-parrotcardgame/)! Há versão desktop e mobile.
 

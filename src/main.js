@@ -9,8 +9,6 @@ const cardsImages = [
 ];
 let counter;
 let id;
-let startTime;
-let presentTime;
 let totalTime;
 const cardsTable = document.querySelector("table");
 question();

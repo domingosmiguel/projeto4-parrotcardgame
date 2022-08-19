@@ -6,7 +6,7 @@
      header {
           margin: 40px 25px 15px;
      }
-     header.wide {
+     header.desktop {
           display: none;
      }
      header.mobile {
