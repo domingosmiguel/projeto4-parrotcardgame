@@ -68,7 +68,7 @@ header.desktop {
 header.mobile {
      display: none;
 }
-table {
+div.table {
      max-width: 1160px;
      margin: 0 auto;
      padding: 0 40px;
@@ -109,15 +109,15 @@ div.stopwatch {
      border: solid 1px var(--border-green);
      border-radius: var(--border-radius);
      box-shadow: 1px 1px 1px var(--black);
-     border-radius: var(--border-radius);
      background-color: var(--card-green);
      align-items: center;
      position: absolute;
+     /* for IOS support */
+     -webkit-backface-visibility: hidden;
+     /*                 */
      backface-visibility: hidden;
      transition: var(--transition);
      transform-style: preserve-3d;
-     /* for IOS support */
-     -webkit-backface-visibility: hidden;
 }
 .face img {
      width: 100px;

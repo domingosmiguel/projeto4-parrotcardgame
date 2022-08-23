@@ -7,8 +7,8 @@ const cardsImages = [
      "./public/tripletsparrot.gif",
      "./public/unicornparrot.gif",
 ];
-let counter;
+let counter = 0;
 let id;
 let totalTime;
-const cardsTable = document.querySelector("table");
+const cardsTable = document.querySelector("div.table");
 question();

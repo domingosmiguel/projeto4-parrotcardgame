@@ -5,8 +5,10 @@ const stopwatch = (startTime) => {
 };
 // Puts the cards on the table and starts the stopwatch
 const startGame = (cards) => {
-     for (let i = 0; i < cards.length; i++) cardsTable.innerHTML += cards[i];
-     gameStarted = new Date().getTime();
+     for (let i = 0; i < cards.length; i++) {
+          cardsTable.innerHTML += cards[i];
+     }
+     const gameStarted = new Date().getTime();
      // Calls 'stopwatch' every 1 second
      id = setInterval(stopwatch, 1000, gameStarted);
 };
@@ -14,9 +16,9 @@ const startGame = (cards) => {
 const shuffler = () => {
      return Math.random() - 0.5;
 };
-// Inserts the number of cards asked by the player at the DOM
+// Inserts the number of cards asked by the player in the DOM
 const cardsGeneration = (numbCards) => {
-     let cardsArray = [];
+     const cardsArray = [];
      for (let j = 0; j < 2; j++) {
           for (let i = 0; i * 2 < numbCards; i++) {
                cardsArray.push(
@@ -41,7 +43,6 @@ const question = () => {
      do {
           numberOfCards = prompt("Com quantas cartas deseja jogar?");
      } while (numberOfCards > 14 || numberOfCards < 4 || numberOfCards % 2 !== 0);
-     counter = 0;
      cardsGeneration(numberOfCards);
 };
 // filters the clicks to avoid bugs by multiple clicks
@@ -50,7 +51,9 @@ const clickFilter = (clicked) => {
      if (clickedBefore.length <= 1) {
           clicked.removeAttribute("onclick");
           clicked.classList.add("flipped");
-          if (clickedBefore.length === 1) flipCard(clicked, clickedBefore[0]);
+          if (clickedBefore.length === 1) {
+               flipCard(clicked, clickedBefore[0]);
+          }
      }
 };
 // Manages the cards (flip, flip back, ends game... )
@@ -76,13 +79,16 @@ const flipCard = (targetCard, flippedCard) => {
                document.querySelectorAll(".card").length ===
                document.querySelectorAll(".stuck").length
           ) {
+               // If all cards are flipped...
                // Stops calling 'stopwatch'
                clearInterval(id);
                // Waits 100 milliseconds before triggering the alert, so that the last card has enough time to start flipping
                setTimeout(() => {
                     alert("Você ganhou em " + counter + " jogadas e " + totalTime + " segundos");
-                    const answer = prompt("Gostaria de jogar novamente? (sim / não)");
-                    if (answer.toLowerCase() === "sim") question();
+                    const answer = confirm("Gostaria de jogar novamente?");
+                    if (answer) {
+                         document.location.reload();
+                    }
                }, 100);
           }
      }
