@@ -17,7 +17,7 @@ Applying the pomodoro time management technique I was able to finish the project
 
 ![Desktop version result image](https://i.imgur.com/tm1mG7h.png)
 
-To show the result, the application was posted on [Github Pages](https://migueldsp.github.io/projeto4-parrotcardgame/)! There are desktop and mobile versions.
+To show the result, the application was posted on [Github Pages](https://domingosmiguel.github.io/projeto4-parrotcardgame/)! There are desktop and mobile versions.
 
 ## **How To Run**:
 
