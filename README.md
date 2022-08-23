@@ -1,29 +1,33 @@
-# **Projeto 4: ParrotCardGame**
+# **Project 4: ParrotCardGame**
 
-Esse projeto foi feito como parte da minha formação como Desenvolvedor Web Full stack na Driven. A meta era desenvolver um jogo da memória simples para fixar melhor as novas ferramentas vistas durante a semana.
+This project was done with the objective to develop a simple memory card game to better capture the new tools seen during the week and try a better code organization.
 
-## **Conteúdos exercitados**:
+## **Exercised Contents**:
 
--    Responsividade
--    Manipulação da DOM por meio de javascript puro (querySelector)
--    Métodos javascript (setTimeout, setInterval)
--    Manipulação de propriedades CSS (classList.add...)
+-    Responsiveness
+-    DOM manipulation through vanilla Javascript (querySelector, classList)
+-    Javascript methods (setTimeout, setInterval)
+-    Handling CSS properties (transform, transition)
 -    EventHandlers (onclick)
--    Javascript básico (funções, do-while, for, Math... ) e melhores práticas
+-    Basic Javascript (functions, do-while, for, Math... ) and best practices
 
-## **Resultados**:
+## **Results**:
 
-Aplicando a técnica pomodoro de gerenciamento do tempo consegui terminar o projeto em algumas horas sem desrespeitar meus limites. Isto me abriu a possibilidade de revisar todo o código em busca de pontos de melhoria.
+Applying the pomodoro time management technique I was able to finish the project in a few hours without exceeding my limits. This opened up the possibility for me to review all the code in search of improvement points.
 
-![Imagem do resultado versão desktop](https://i.imgur.com/tm1mG7h.png)
+![Desktop version result image](https://i.imgur.com/tm1mG7h.png)
 
-Para mostrar o resultado, a aplicação foi colocada no ar no [Github Pages](https://migueldsp.github.io/projeto4-parrotcardgame/)! Há versão desktop e mobile.
+To show the result, the application was posted on [Github Pages](https://migueldsp.github.io/projeto4-parrotcardgame/)! There are desktop and mobile versions.
 
-## **Observações**:
+## **How To Run**:
 
-Com a boa gestão do tempo, fiz todo o projeto tendo em mente algumas práticas que julguei interessantes, tais como:
+-    Clone repository
+-    Open index.html in your browser
 
--    Código todo comentado.
--    Cards com itens sendo gerado de forma dinâmica, o que permitiu reduzir linhas repetitivas de HTML.
--    Melhor organização das funções, com seus escopos bem definidos e otimizados.
--    Uso de variáveis no css para facilitar a futura manutenção do código.
+## **Comments**:
+
+With good time management, I did the whole project keeping in mind some practices that I found interesting, such as:
+
+-    Cards with items being generated dynamically, which allowed to reduce repetitive lines of HTML
+-    Better organization of functions, with their well-defined and optimized scopes
+-    Use of variables in CSS to facilitate future code maintenance
